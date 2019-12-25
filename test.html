@@ -1,0 +1,42 @@
+$\frac{232}{222}$ / $\frac{232}{222\sqrt[3]{2}}$
+<script type="text/javascript" async src="https://vinastudy.vn/desktop/templates/asset/js/MathJax-2.7/MathJax.js?config=TeX-AMS_CHTML">
+</script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        "HTML-CSS": {
+            linebreaks: {
+                automatic: true,
+                width: "75% container" 
+            }
+        },
+        SVG: {
+            linebreaks: {
+                automatic: true,
+                width: "75% container" 
+            }
+        },
+        tex2jax: {
+            inlineMath: [
+                ['$', '$']
+            ],
+            linebreaks: {
+                automatic: true
+            },
+            processEscapes: false,
+            processEnvironments: true,
+            processRefs: true
+        }
+    });
+    MathJax.Hub.Register.StartupHook("TeX Jax Ready",
+        function() {
+            MathJax.Hub.Insert(MathJax.InputJax.TeX.Definitions.macros, {
+                cancel: ["Extension", "cancel"],
+                bcancel: ["Extension", "cancel"],
+                xcancel: ["Extension", "cancel"],
+                cancelto: ["Extension", "cancel"]
+            });
+        });
+    MathJax.Hub.Register.MessageHook("Math Processing Error", function(message) {
+        console.log("message");
+    });
+</script>

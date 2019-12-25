@@ -1,0 +1,28 @@
+{
+  "name": "mathquill",
+  "version": "1.0.0",
+  "description": "Không biết viết gì vào đây",
+  "main": "webpack.config.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack -p",
+    "watch": "webpack --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/tiz1998/mathquill.git"
+  },
+  "author": "Tiz",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/tiz1998/mathquill/issues"
+  },
+  "homepage": "https://gitlab.com/tiz1998/mathquill#readme",
+  "devDependencies": {
+    "webpack": "^4.41.4",
+    "webpack-cli": "^3.3.10"
+  }
+}

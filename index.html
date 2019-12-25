@@ -1,0 +1,56 @@
+<html>
+
+<head>
+  <link href="lib/mathquill.css" rel="stylesheet">
+  <link href="lib/matheditor.css" rel="stylesheet">
+</head>
+
+<body style="background:#F6F4F4;overflow:hidden">
+  <div id="answer"></div>
+  <div class="mq-editable-field mq-math-mode">
+
+  </div>
+
+  <div id="hihi" contenteditable="true" style="border: 1px solid red;min-height: 50px;">
+  </div>
+  <input type="button" onClick="insertTextAtCursor('TEXT')" value="Insert">
+</body>
+<script>
+  function insertTextAtCursor(text) {
+    var sel, range, html;
+    text = me.getLatex();
+    sel = window.getSelection();
+    range = sel.getRangeAt(0);
+    range.deleteContents();
+    var textNode = document.createElement('span');
+    textNode.setAttribute('class', 'xxx');
+    textNode.setAttribute('data-latex', text);
+    textNode.innerHTML = `$${text}$ `;
+    
+    range.insertNode(textNode);
+    range.setStartAfter(textNode);
+    sel.removeAllRanges();
+    sel.addRange(range);
+
+    // let MQ = MathQuill.getInterface(2);
+    // let answerSpan = document.getElementsByClassName('xxx');
+    // let  config = {
+    //     handlers: {
+            
+    //     }
+    // };
+    // let answerMathField = MQ.MathField(answerSpan, config);
+
+  }
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="lib/mathquill.min.js"></script>
+<script src="lib/matheditor.js"></script>
+<script type="text/javascript">
+  var me = new MathEditor('answer');
+  // me.removeButtons(['fraction']);
+  // me.setTemplate('floating-toolbar');
+</script>
+
+</html>
