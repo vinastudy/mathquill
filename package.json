@@ -1,6 +1,6 @@
 {
-  "name": "mathquill",
-  "version": "1.0.1",
+  "name": "@vinastudy/mathquill",
+  "version": "1.0.0",
   "description": "Không biết viết gì vào đây",
   "main": "webpack.config.js",
   "directories": {
